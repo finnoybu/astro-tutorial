@@ -1,25 +1,8 @@
 ---
-import Navigation from "@/components/Navigation.astro";
-import "../styles/global.css";
+import BaseLayout from "@layouts/BaseLayout.astro";
 const pageTitle = "Home Page";
 ---
 
-<!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="generator" content={Astro.generator} />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <!-- Ensure compatibility with IE -->
-    <meta name="description" content="A simple boilerplate HTML page" />
-    <meta name="author" content="Your Name" />
-    <title>{pageTitle}</title>
-  </head>
-  <body>
-    <Navigation />
-
-    <h1>{pageTitle}</h1>
-  </body>
-</html>
+<BaseLayout pageTitle={pageTitle}>
+  <h2>My awesome blog subtitle</h2>
+</BaseLayout>
