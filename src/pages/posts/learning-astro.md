@@ -2,7 +2,7 @@
 layout: '@layouts/MarkdownPostLayout.astro'
 title: "Learning About Markdown in Astro"
 author: Astro Learner
-pubDate: 2022-08-08
+pubDate: 2022-08-10
 image:
     url: ''
     alt: ''
