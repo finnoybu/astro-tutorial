@@ -4,21 +4,30 @@
     "strict": true,
     "strictNullChecks": true,
     "jsx": "react-jsx",
-    "jsxImportSource": "react",
+    "jsxImportSource": "preact",
     "baseUrl": ".",
     "paths": {
+      "@interfaces/*": [
+        "src/interfaces/*"
+      ],
       "@components/*": [
         "src/components/*"
       ],
       "@layouts/*": [
         "src/layouts/*"
       ],
+      "@pages/*": [
+        "src/pages/*"
+      ],
+      "@posts/*": [
+        "src/pages/posts/*"
+      ],
       "@scripts/*": [
         "src/scripts/*"
       ],
       "@styles/*": [
         "src/styles/*"
-      ],
-    },
+      ]
+    }
   }
 }

@@ -3,5 +3,5 @@ const { pubDate, title, url } = Astro.props;
 ---
 
 <li>
-  [{pubDate}]&emsp;<a href={url}>{title}</a>
+  [{pubDate.slice(0, 10)}]&emsp;<a href={url}>{title}</a>
 </li>
