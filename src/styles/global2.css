@@ -1,0 +1,274 @@
+/* Color Variables */
+:root {
+    /* Main brand color */
+    --color-primary: #0070f3;
+    /* Darker shade for hover/active states */
+    --color-primary-dark: #005bb5;
+    /* Secondary accent color */
+    --color-secondary: #ff4081;
+    /* Background color */
+    --color-background: #f9f9f9;
+    /* Surface elements like cards, panels */
+    --color-surface: #ffffff;
+    /* Primary text color */
+    --color-text: #333333;
+    /* Heading text color */
+    --color-heading: #111111;
+    /* Muted text (e.g., descriptions) */
+    --color-muted: #888888;
+    /* Borders and dividers */
+    --color-border: #dddddd;
+    /* Error states and warnings */
+    --color-error: #ff3b30;
+    /* Success messages */
+    --color-success: #34c759;
+    /* Warning messages */
+    --color-warning: #ffcc00;
+    /* Focus outlines */
+    --color-focus: var(--color-primary);
+
+    /* Light/Dark Mode */
+    --color-background-light: #ffffff;
+    --color-background-dark: #000000;
+    --color-text-light: #333333;
+    --color-text-dark: #ffffff;
+
+    /* Spacing */
+    --spacing-xxs: 0.25rem;
+    --spacing-xs: 0.5rem;
+    --spacing-sm: 0.75rem;
+    --spacing-md: 1rem;
+    --spacing-lg: 1.5rem;
+    --spacing-xl: 2rem;
+    --spacing-xxl: 3rem;
+
+    /* Font Sizes */
+    --font-size-xs: 0.75rem;
+    --font-size-sm: 0.875rem;
+    --font-size-md: 1rem;
+    --font-size-lg: 1.25rem;
+    --font-size-xl: 1.5rem;
+    --font-size-xxl: 2rem;
+
+    /* Font Weights */
+    --font-weight-light: 300;
+    --font-weight-regular: 400;
+    --font-weight-medium: 500;
+    --font-weight-bold: 700;
+
+    /* Border Radius */
+    --border-radius-sm: 4px;
+    --border-radius-md: 8px;
+    --border-radius-lg: 12px;
+    --border-radius-round: 50%;
+
+    /* Shadows */
+    --shadow-sm: 0px 1px 3px rgba(0, 0, 0, 0.1);
+    --shadow-md: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    --shadow-lg: 0px 10px 15px rgba(0, 0, 0, 0.15);
+
+    /* Transitions */
+    --transition-default: 0.2s ease-in-out;
+
+    /* Z-Index */
+    --z-index-base: 1;
+    --z-index-dropdown: 1000;
+    --z-index-modal: 1050;
+    --z-index-overlay: 1100;
+    --z-index-toast: 1200;
+}
+
+/* CSS Reset based on modern standards */
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Root font sizing for easy scaling */
+html {
+    /* 1rem = 16px by default */
+    font-size: 100%;
+    /* Prevent iOS text size adjust */
+    -webkit-text-size-adjust: 100%;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    font-size: 1rem;
+    line-height: 1.6;
+    color: var(--color-text);
+    background-color: var(--color-background);
+    text-rendering: optimizeLegibility;
+}
+
+/* Light/Dark Mode with prefers-color-scheme */
+@media (prefers-color-scheme: dark) {
+    :root {
+        --color-background: var(--color-background-dark);
+        --color-text: var(--color-text-dark);
+    }
+}
+
+/* Headings with responsive scaling */
+h1, h2, h3, h4, h5, h6 {
+    line-height: 1.2;
+    margin-top: 0;
+    color: var(--color-heading);
+}
+
+h1 {
+    font-size: var(--font-size-xxl);
+}
+
+h2 {
+    font-size: var(--font-size-xl);
+}
+
+h3 {
+    font-size: var(--font-size-lg);
+}
+
+h4 {
+    font-size: var(--font-size-md);
+}
+
+h5 {
+    font-size: var(--font-size-sm);
+}
+
+h6 {
+    font-size: var(--font-size-xs);
+}
+
+/* Link styles */
+a {
+    color: var(--color-primary);
+    text-decoration: none;
+}
+
+a:hover,
+a:focus {
+    text-decoration: underline;
+}
+
+/* List styles */
+ul, ol {
+    margin-inline-start: 1.5rem;
+    list-style-position: outside;
+}
+
+li {
+    margin-bottom: 0.5rem;
+}
+
+/* Images and media elements */
+img,
+picture,
+video,
+canvas,
+svg {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+/* Container for layout */
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin-inline: auto;
+    padding-inline: var(--spacing-md);
+}
+
+/* Button styles */
+button,
+input,
+select,
+textarea {
+    font-family: inherit;
+    font-size: inherit;
+    color: inherit;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    transition: background-color var(--transition-default), box-shadow var(--transition-default);
+}
+
+button:focus,
+input:focus,
+select:focus,
+textarea:focus {
+    outline: 2px solid var(--color-focus);
+}
+
+button {
+    padding: var(--spacing-sm) var(--spacing-md);
+    background-color: var(--color-primary);
+    color: var(--color-surface);
+    border-radius: var(--border-radius-md);
+}
+
+button:hover {
+    background-color: var(--color-primary-dark);
+}
+
+/* Flexbox and Grid utility classes */
+.flex {
+    display: flex;
+}
+
+.flex-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.grid {
+    display: grid;
+    gap: var(--spacing-md);
+}
+
+.grid-2 {
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.grid-3 {
+    grid-template-columns: repeat(3, 1fr);
+}
+
+/* Utility classes */
+.text-center {
+    text-align: center;
+}
+
+.text-right {
+    text-align: right;
+}
+
+.mb-1 {
+    margin-bottom: var(--spacing-xs);
+}
+
+.mb-2 {
+    margin-bottom: var(--spacing-sm);
+}
+
+.mb-3 {
+    margin-bottom: var(--spacing-md);
+}
+
+/* Accessibility: visually hidden class */
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    border: 0;
+}
